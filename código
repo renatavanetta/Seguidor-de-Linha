@@ -1,0 +1,117 @@
+
+#include <Servo.h>
+Servo servoDireito, servoEsquerdo;
+//pinMode(INPUT, A0);
+
+void setup() {
+  servoDireito.attach(5);
+  servoEsquerdo.attach(6);
+  servoDireito.write(90);
+  servoEsquerdo.write(90);
+}
+
+
+
+void loop() {
+  int valorBotao;
+  valorBotao = analogRead(A0);
+
+  if(valorBotao >=450 && valorBotao <=599){
+  delay(2000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(90);
+  }
+
+  if(valorBotao >=250 && valorBotao <=449){
+  delay(2000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(90);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(90);
+  delay(1000);
+   servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(90);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(90);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(180);
+  delay(1000);
+  servoDireito.write(0);
+  servoEsquerdo.write(90);
+  delay(1000);
+   servoDireito.write(90);
+  servoEsquerdo.write(90);
+  }
+
+  if(valorBotao >=120 && valorBotao <=249){
+  delay(2000);
+  servoDireito.write(85);
+  servoEsquerdo.write(180);
+  delay(10000);
+   servoDireito.write(90);
+  servoEsquerdo.write(90);
+  }
+
+  if(valorBotao <=119){
+  delay(2000);
+  servoDireito.write(85);
+  servoEsquerdo.write(180);
+  delay(4500);
+  servoDireito.write(0);
+  servoEsquerdo.write(95);
+  delay(4500);
+   servoDireito.write(90);
+  servoEsquerdo.write(90);
+  }
+}
